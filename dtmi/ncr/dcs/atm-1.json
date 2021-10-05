@@ -1,0 +1,190 @@
+{
+  "@id": "dtmi:ncr:dcs:ATM;1",
+  "@type": "Interface",
+  "displayName": "ATM IoT Device",
+  "contents": [
+    {
+      "@type": "Command",
+      "name": "Reboot",
+      "request": {
+        "name": "rebootTime",
+        "displayName": "Reboot Time",
+        "description": "Requested time to reboot the device.",
+        "schema": "dateTime"
+      },
+      "response": {
+        "name": "scheduledTime",
+        "schema": "dateTime"
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "TelemetryInterval",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "SmartDiskStatus",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "IsOK",
+            "schema": "boolean"
+          },
+          {
+            "name": "Model",
+            "schema": "string"
+          }
+        ]
+      },
+      "writable": true
+    },
+    {
+      "@type": "Telemetry",
+      "name": "TerminalInfo",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "Manufacturer",
+            "schema": "string"
+          },
+          {
+            "name": "ManufacturingSize",
+            "schema": "string"
+          },
+          {
+            "name": "ProductClass",
+            "schema": "string"
+          },
+          {
+            "name": "SerialNumber",
+            "schema": "string"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "AllInventory",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "Devices",
+            "schema": {
+              "@type": "Array",
+              "elementSchema": {
+                "@type": "Object",
+                "fields": [
+                  {
+                    "name": "Name",
+                    "schema": "string"
+                  },
+                  {
+                    "name": "Id",
+                    "schema": "integer"
+                  },
+                  {
+                    "name": "NumberOfModules",
+                    "schema": "integer"
+                  },
+                  {
+                    "name": "Modules",
+                    "schema": {
+                      "@type": "Array",
+                      "elementSchema": {
+                        "@type": "Object",
+                        "fields": [
+                          {
+                            "name": "Name",
+                            "schema": "string"
+                          },
+                          {
+                            "name": "Id",
+                            "schema": "integer"
+                          },
+                          {
+                            "name": "SerialNumber",
+                            "schema": "string"
+                          },
+                          {
+                            "name": "HardwareVersion",
+                            "schema": "string"
+                          },
+                          {
+                            "name": "Replenishable",
+                            "schema": "boolean"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StatusInfo",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+
+          {
+            "name": "Devices",
+            "schema": {
+              "@type": "Array",
+              "elementSchema": {
+                "@type": "Object",
+                "fields": [
+                  {
+                    "name": "Name",
+                    "schema": "string"
+                  },
+                  {
+                    "name": "Id",
+                    "schema": "integer"
+                  },
+                  {
+                    "name": "Modules",
+                    "schema": {
+                      "@type": "Array",
+                      "elementSchema": {
+                        "@type": "Object",
+                        "fields": [
+                          {
+                            "name": "Name",
+                            "schema": "string"
+                          },
+                          {
+                            "name": "Id",
+                            "schema": "integer"
+                          },
+                          {
+                            "name": "DetailedStatus",
+                            "schema": "string"
+                          },
+                          {
+                            "name": "SummaryStatus",
+                            "schema": "string"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

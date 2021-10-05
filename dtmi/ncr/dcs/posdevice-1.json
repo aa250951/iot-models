@@ -1,0 +1,66 @@
+{
+  "@id": "dtmi:ncr:dcs:POSDevice;1",
+  "@type": "Interface",
+  "displayName": "POS Device",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "PosInventory",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "Name",
+              "schema": "string"
+            },
+            {
+              "name": "Printer",
+              "schema": "string"
+            },
+            {
+              "name": "Vid",
+              "schema": "string"
+            },
+            {
+              "name": "Pid",
+              "schema": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "PosState",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "State",
+              "schema": "string"
+            },
+            {
+              "name": "Code",
+              "schema": "string"
+            },
+            {
+              "name": "DateTime",
+              "schema": "date"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "PosTally",
+      "schema": "string"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+
+}

@@ -1,0 +1,121 @@
+{
+  "@id": "dtmi:ncr:dcs:SCODevice;1",
+  "@type": "Interface",
+  "displayName": "SCO Device",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "scoCmpStateAll",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "Payload",
+            "schema": {
+              "@type": "Array",
+              "elementSchema": "dtmi:ncr:dcs:SCOStateComponent;1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "scoCmpInventoryAll",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "Payload",
+            "schema": {
+              "@type": "Array",
+              "elementSchema": "dtmi:ncr:dcs:SCOInventoryComponent;1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "scoCmpCashAll",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "AcceptorCounts",
+            "schema": {
+              "@type": "Array",
+              "elementSchema": "string"
+            }
+          },
+          {
+            "name": "DispenserCounts",
+            "schema": {
+              "@type": "Array",
+              "elementSchema": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "TerminalInfo",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "Model",
+            "schema": "string"
+          },
+          {
+            "name": "SerialNumber",
+            "schema": "string"
+          }
+        ]
+      }
+    }
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:ncr:dcs:SCOStateComponent;1",
+      "@type": "Object",
+      "displayName": "SCO State Component",
+      "fields": [
+        {
+          "name": "State",
+          "schema": "string"
+        },
+        {
+          "name": "Code",
+          "schema": "integer"
+        },
+        {
+          "name": "DateTime",
+          "schema": "date"
+        }
+      ]
+    },
+    {
+      "@id": "dtmi:ncr:dcs:SCOInventoryComponent;1",
+      "@type": "Object",
+      "displayName": "SCO Inventory Component",
+      "fields": [
+        {
+          "name": "Name",
+          "schema": "string"
+        },
+        {
+          "name": "Model",
+          "schema": "string"
+        },
+        {
+          "name": "SerialNumber",
+          "schema": "string"
+        }
+      ]
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+
+}

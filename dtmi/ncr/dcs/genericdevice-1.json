@@ -1,0 +1,289 @@
+{
+  "@id": "dtmi:ncr:dcs:GenericDevice;1",
+  "@type": "Interface",
+  "displayName": "Generic Device",
+  "contents": [
+
+    {
+      "@type": "Property",
+      "name": "OperatingSystemInformation",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "Organization",
+            "schema": "string"
+          },
+          {
+            "name": "CurrentTimeZone",
+            "schema": "integer"
+          },
+          {
+            "name": "Caption",
+            "schema": "string"
+          },
+          {
+            "name": "OSArchitecture",
+            "schema": "string"
+          },
+          {
+            "name": "SerialNumber",
+            "schema": "string"
+          },
+          {
+            "name": "NumberOfUsers",
+            "schema": "integer"
+          },
+          {
+            "name": "Version",
+            "schema": "string"
+          },
+          {
+            "name": "Manufacturer",
+            "schema": "string"
+          },
+          {
+            "name": "OSLanguage",
+            "schema": "integer"
+          },
+          {
+            "name": "CountryCode",
+            "schema": "string"
+          }
+        ]
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "SmartDiskStatus",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "IsOK",
+            "schema": "boolean"
+          },
+          {
+            "name": "Model",
+            "schema": "string"
+          }
+        ]
+      },
+      "writable": true
+    },
+    {
+      "@type": "Telemetry",
+      "name": "CpuInformation",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "Caption",
+            "schema": "string"
+          },
+          {
+            "name": "Name",
+            "schema": "string"
+          },
+          {
+            "name": "NumberOfCores",
+            "schema": "string"
+          },
+          {
+            "name": "PowerManagementSupported",
+            "schema": "boolean"
+          },
+          {
+            "name": "VirtualizationFirmwareEnabled",
+            "schema": "boolean"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "BaseboardInformation",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "SerialNumber",
+              "schema": "string"
+            },
+            {
+              "name": "Version",
+              "schema": "string"
+            },
+            {
+              "name": "Manufacturer",
+              "schema": "string"
+            },
+            {
+              "name": "Product",
+              "schema": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ComputerInformation",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "DNSHostName",
+              "schema": "string"
+            },
+            {
+              "name": "Model",
+              "schema": "string"
+            },
+            {
+              "name": "Manufacturer",
+              "schema": "string"
+            },
+            {
+              "name": "PartOfDomain",
+              "schema": "boolean"
+            },
+            {
+              "name": "PowerOnPasswordStatus",
+              "schema": "integer"
+            },
+            {
+              "name": "Status",
+              "schema": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "BiosInformation",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "BIOSVersion",
+              "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+              }
+            },
+            {
+              "name": "CurrentLanguage",
+              "schema": "string"
+            },
+            {
+              "name": "Manufacturer",
+              "schema": "string"
+            },
+            {
+              "name": "SerialNumber",
+              "schema": "string"
+            },
+            {
+              "name": "Status",
+              "schema": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "PatchInformation",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "HotFixId",
+              "schema": "string"
+
+            },
+            {
+              "name": "InstalledOn",
+              "schema": "date"
+
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "SoftwareInstallations",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "DisplayName",
+              "schema": "string"
+            },
+            {
+              "name": "DisplayVersion",
+              "schema": "string"
+            },
+            {
+              "name": "InstallDate",
+              "schema": "date"
+            },
+            {
+              "name": "Publisher",
+              "schema": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "InterfaceInformation",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "Name",
+              "schema": "string"
+            },
+            {
+              "name": "IpAddress",
+              "schema": "string"
+            },
+            {
+              "name": "SubNet",
+              "schema": "string"
+            },
+            {
+              "name": "Gateway",
+              "schema": "string"
+            },
+            {
+              "name": "Mac",
+              "schema": "string"
+            }
+          ]
+        }
+      }
+    }
+
+  ],
+  "@context": "dtmi:dtdl:context;2"
+
+}
