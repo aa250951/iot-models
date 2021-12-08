@@ -5,8 +5,8 @@
   "contents": [
 
     {
-      "@type": "Property",
-      "name": "OperatingSystemInformation",
+      "@type": "Telemetry",
+      "name": "OSALL",
       "schema": {
         "@type": "Object",
         "fields": [
@@ -51,12 +51,11 @@
             "schema": "string"
           }
         ]
-      },
-      "writable": true
+      }
     },
     {
-      "@type": "Property",
-      "name": "SmartDiskStatus",
+      "@type": "Telemetry",
+      "name": "DSKSTATS",
       "schema": {
         "@type": "Object",
         "fields": [
@@ -69,12 +68,11 @@
             "schema": "string"
           }
         ]
-      },
-      "writable": true
+      }
     },
     {
       "@type": "Telemetry",
-      "name": "CpuInformation",
+      "name": "CPUINFO",
       "schema": {
         "@type": "Object",
         "fields": [
@@ -103,7 +101,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "BaseboardInformation",
+      "name": "BSBALL",
       "schema": {
         "@type": "Array",
         "elementSchema": {
@@ -131,7 +129,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "ComputerInformation",
+      "name": "CSALL",
       "schema": {
         "@type": "Array",
         "elementSchema": {
@@ -167,7 +165,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "BiosInformation",
+      "name": "BIOSALL",
       "schema": {
         "@type": "Array",
         "elementSchema": {
@@ -202,7 +200,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "PatchInformation",
+      "name": "PATALL",
       "schema": {
         "@type": "Array",
         "elementSchema": {
@@ -224,7 +222,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "SoftwareInstallations",
+      "name": "SOFTINSTALL",
       "schema": {
         "@type": "Array",
         "elementSchema": {
@@ -252,7 +250,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "InterfaceInformation",
+      "name": "INALL",
       "schema": {
         "@type": "Array",
         "elementSchema": {
