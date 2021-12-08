@@ -55,7 +55,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "DSKSTATS",
+      "name": "DSKSTATUS",
       "schema": {
         "@type": "Object",
         "fields": [
