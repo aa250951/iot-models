@@ -198,56 +198,7 @@
         }
       }
     },
-    {
-      "@type": "Telemetry",
-      "name": "PATALL",
-      "schema": {
-        "@type": "Array",
-        "elementSchema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "HotFixId",
-              "schema": "string"
 
-            },
-            {
-              "name": "InstalledOn",
-              "schema": "date"
-
-            }
-          ]
-        }
-      }
-    },
-    {
-      "@type": "Telemetry",
-      "name": "SOFTINSTALL",
-      "schema": {
-        "@type": "Array",
-        "elementSchema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "DisplayName",
-              "schema": "string"
-            },
-            {
-              "name": "DisplayVersion",
-              "schema": "string"
-            },
-            {
-              "name": "InstallDate",
-              "schema": "date"
-            },
-            {
-              "name": "Publisher",
-              "schema": "string"
-            }
-          ]
-        }
-      }
-    },
     {
       "@type": "Telemetry",
       "name": "INALL",
