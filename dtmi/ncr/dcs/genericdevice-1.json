@@ -3,7 +3,20 @@
   "@type": "Interface",
   "displayName": "Generic Device",
   "contents": [
-
+   {
+      "@type": "Command",
+      "name": "Reboot",
+      "request": {
+        "name": "rebootTime",
+        "displayName": "Reboot Time",
+        "description": "Requested time to reboot the device.",
+        "schema": "dateTime"
+      },
+      "response": {
+        "name": "scheduledTime",
+        "schema": "dateTime"
+      }
+    },
     {
       "@type": "Telemetry",
       "name": "OSALL",
