@@ -18,6 +18,39 @@
       }
     },
     {
+      "@type": "Command",
+      "name": "TestComplexCommand",
+      "request": {
+        "name": "testComplexCommand",
+        "displayName": "Test Complex Command",
+        "description": "A command that receives multiple input parameters",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "theDouble",
+              "displayName": "The Double",
+              "schema": "double"
+            },
+            {
+              "name": "theDateTime",
+              "displayName": "The DateTime",
+              "schema": "dateTime"
+            },
+            {
+              "name": "theString",
+              "displayName": "The String",
+              "schema": "string"
+            }
+          ]
+        }
+      },
+      "response": {
+        "name": "responseString",
+        "schema": "string"
+      }
+    },
+    {
       "@type": "Telemetry",
       "name": "OSALL",
       "schema": {
